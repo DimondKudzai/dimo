@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>
+Dimond K.
+</title>
+<meta http-equiv="pragma" content="nocache"/>
+<meta name="keywords" content="junior web developer, frontend engineer, Madechawo, portfolio, Dimond k,vue.js"/>
+<meta  name="description"  content="Dimond k portfolio"/>
+<base href="index.html"/>
+<link rel="stylesheet" type="text/css" href="animate.min.css"/>
+<link rel="stylesheet"
+href="https://
+cdnjs.cloudflare.com/ajax/
+libs/font-awesome/4.7.0/css/
+font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<script type="text/javascript" src="myvue.js"></script>
+<script src="router.js"></script>
+<script src="control.js"></script>
+<script src="javascript.js"></script>
+<script>
+$(function(){
+$("#control").hide("fast")
+});
+</script>
+<script>
+$(function(){
+$("#bars").click(function(){
+$("#control").toggle("fast")
+})
+});
+</script>
+</head>
+<body>
+   <br>
+    <header>
+<br><img src="bars.jpg" id="bars">
+<img src="dimond.jpg" height="150px" width="90px" class="developer" alt="developer">
+<br><br><br><h1><b class="me">Dimond K.</b></h1>
+    </header>
+<div id="routes">
+<template id="table" class="table">
+<div id="routes">
+    <table align="left" width="33%" class="table" bgColor="#123" id="control">
+       <tr class="control-panel">
+          <td> <b> <router-link to="/">Home</router-link><br><br><br><router-link to="/contact"> contact</router-link><br><br><br><a href="https://dimondkudzai.github.io/stories/index.html"><ul>Other projects
+                           <li>The untold stories</li>
+      </ul>
+</a>
+<br><br><router-link to="/skills">Skills</router-link><br><br><br><a href="#about">About </a><br><br><br><router-link to="/contact">Email</router-link><br></b>
+          </td>
+       </tr>
+    </table>
+  </template>
+<transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+<router-view></router-view>
+</transition>
+</div>
+<div id="app" class="control-panel">
+<transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+<control-panel></control-panel>
+</transition>
+</div>
+<template id="path_home">
+<table align="center" width="" bgColor="">
+<tr class="p">
+<td>
+<br><br>
+<img src="norton.jpg" class="norton" width="600px" height="500px"><br><br>
+<b class="dot">H</b>ello my name is Dimond K Madechawo<b class="dot">.</b>I<b class="dot">'</b>m a full-stack<br>developer based in Zimbabwe<b class="dot">.</b>I have been program<b class="dot">-</b> <br>ming for a year now<b class="dot">.</b> I was born and raised in Harare<b class="dot">.</b>Programming has been a long journey with it<b class="dot">'</b>s own obstacles but love dilutes everything<b class="dot">.</b><br><br><br><b class="dot">B</b>eing a self taught programmer is hard on it<b class="dot">'</b>s on<b class="dot">,</b>but with courage  <b class="dot">,</b> hope and determination you will find your self ceiling through<b class="dot">.</b>
+I<b class="dot">'</b>m very passionate about my work and I<b class="dot">'</b>m<br>also very open<b class="dot">.</b>If you have any suggestions<b class="dot">,</b>comments or<br> would you need any information feel free to contact me<b class="dot">.</b> <br><br>
+</td>
+</tr>
+</table>
+</template>
+<template id="contact">
+  <form method="post"  class="p" action="hell.php">
+   <b> <b class="dot">N</b>ame<br>
+  <input type="text" name="" name="name"><br><br>
+  <b class="dot">E</b>mail<br>
+   <input type="text" name="" name="email"><br><br>
+  <b class="dot">M</b>essage<br>
+   <textarea rows="8" cols="22" required="" name="message"></textarea>
+  <br><br>
+  <button id="button" value="submit"><b class="dot">s</b>ent</button>
+ </b>
+</template>
+<template id="skills">
+  <div class="skills">
+    <b class="dot">A</b>s a result of my hard work,i'm now having familiarity with the folling:<br><br>
+    <ul>
+      <li><b class="dot">H</b>tml5/css3</li>
+      <li><b class="dot">J</b>avascript</li>
+      <li><b class="dot">j</b>query</li>
+      <li><b class="dot">v</b>ue.js</li>
+      <li><b class="dot">P</b>HP</li>
+    </ul>
+  </div>
+</template>
+<br><br><hr><br><br>
+<table align="center" width="50px">
+<tr class="last">
+<td>
+<a href="https://wwww.Facebook.com"><img src="facebook.png" class="icons"></a></td>
+<td>
+<a href="https://www.twitter.com><img src="twitter.png" class="icons"></a></td>
+<td>
+<a href="index.html#/contact"><img src="mail.jpg" class="icons"></a></router-link>
+</td>
+</tr>
+</table>
+<a name="about"><table width="50%" align="center">
+<tr class="last2">
+<td>
+<br>
+<b>&copy Dimond K Madechawo.<br>
+all rights reserved 2019.<br>
++263712098125</b><br>
+<img src="mylogo.jpg" align="center" width="300px" height="200px" class="mylogo"><br>
+</td>
+</td>
+</tr>
+</table>
+</a>
+<hr>
+<br><br>
+ <script> 
+Vue.use({VueRouter})  
+const home={ template:"#path_home"}
+ const contact={ template:"#contact"}
+const skills={ template:"#skills"}
+ const router= new VueRouter({
+routes:[
+{path:"/",component:home},
+{path:"/contact",component:contact},
+{path:"/skills",component:skills}
+]
+});
+new Vue({
+router,
+el: "#routes"
+});
+
+Vue.component("control-panel",{
+template: "#table"
+});
+new Vue({
+el: "#app"
+});
+
+new Vue({
+  el: "#names",
+  data:{
+    names:"feel free pliz"
+  }
+});
+</script>
+</body>
+</html>

@@ -125,5 +125,5 @@ font-size: 30px;
 background-color: ;
 }
 #routes{
-Position: absolute;
+Position: static;
 }

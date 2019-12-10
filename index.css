@@ -111,7 +111,7 @@ font-size: 40px;
 .norton{
 	border-radius: 3%;
         top: 500px;
-        Position:absolute;
+        Position:relative;
 }
 button{
 	background-color: #123;
